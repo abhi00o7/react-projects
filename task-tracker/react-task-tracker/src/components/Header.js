@@ -1,9 +1,10 @@
-import React from 'react'
+// import React from 'react'
 
 const Header = () => {
     return (
-        <header>
+        <header className='header'>
             <h1>Task Tracker</h1>
+            <button className='btn'>Add</button>
         </header>
     )
 }
