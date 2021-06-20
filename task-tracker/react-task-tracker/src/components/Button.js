@@ -2,9 +2,8 @@
 
 const Button = () => {
     return (
-        <div>
-            
-        </div>
+        <button className='btn'>Add</button>
+
     )
 }
 
