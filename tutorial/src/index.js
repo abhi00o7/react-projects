@@ -11,4 +11,3 @@ function Greeting() {
 
 ReactDOM.render(<Greeting />, document.getElementById('root'))
 
-// export default index
