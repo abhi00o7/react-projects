@@ -1,29 +1,41 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
+import './index.css'
 // stateless functional component
-function Greeting() {
+function BookList() {
   return (
-    <div>
-      <Person/>
-      <h4>This is not my first JSX</h4>
-      <ul>
-        <li>
-          <a href="#main">Sparta</a>
-        </li>
-        <li>
-          <Message/>
-        </li>
-        <li>
-          <Kya/>
-        </li>
-      </ul>
-    </div>
+    <section>
+      <Book/>
+      <Book/>
+      <Book/>
+      <Book/>
+      <Book/>
+      <Book/>
+   
+    </section>
   )
 }
-const Person = () =>{ return <h2>Jon Pierce</h2>}  
-const Message = () => <p>Gali gali me shor hai</p>  
-const Kya = () => <p>Pierce bhai chor hai</p>  
+const Book = () =>{
+  return <article>
+    <Image></Image>
+    <Title/>
+    <Author/>
+  </article>
+}  
 
-ReactDOM.render(<Greeting /> , document.getElementById('root'))
+const Image = () =>{
+ return  <img src="https://images-eu.ssl-images-amazon.com/images/I/71JZ0neAP1L._AC_UL200_SR200,200_.jpg" alt="Book Cover" />
+}
+
+const Title = () =>{
+  return <h1>
+  The Blue Umbrella
+</h1>
+}
+const Author = () => {
+  return <h4>Ruskin Bond</h4>
+}
+
+ReactDOM.render(<BookList /> , document.getElementById('root'))
 
