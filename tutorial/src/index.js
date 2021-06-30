@@ -1,30 +1,24 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
+import React from 'react';
+import ReactDom from 'react-dom';
 
-import './index.css'
-// stateless functional component
+// CSS
+import './index.css';
+
+import {data} from './books'
+import SpecificBook from './Book'
+import {greeting} from './testing/testing'
+
 function BookList() {
+  console.log(greeting);
   return (
-    <section>
-      <Book/>
-      </section>
-  )
-}
-const Book = () =>{
-  const title = 'The Blue Umbrella'
-  const author = 'Ruskin Bond'
-
-return <article className="book">
-    <Image></Image>
-    <h1>{title}</h1>
-    <h4>{author}</h4>
-  </article>
-}  
-
-const Image = () =>{
- return  <img src="https://images-eu.ssl-images-amazon.com/images/I/71JZ0neAP1L._AC_UL200_SR200,200_.jpg" alt="Book Cover" />
+    <section className='booklist'>
+      {data.map((book, index) => {
+        return <SpecificBook key={book.id} {...book}></SpecificBook>;
+      })}
+    </section>
+  );
 }
 
 
-ReactDOM.render(<BookList /> , document.getElementById('root'))
 
+ReactDom.render(<BookList />, document.getElementById('root'));
