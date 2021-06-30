@@ -1,0 +1,1 @@
+export let greeting = "Welcome to testing."
