@@ -2,22 +2,22 @@ export const data = [
  {
   id: 1,
   img:
-   'https://images-na.ssl-images-amazon.com/images/I/81eB%2B7%2BCkUL._AC_UL200_SR200,200_.jpg',
-  title: 'I Love You to the Moon and Back',
-  author: 'Amelia Hepworth',
+   'https://m.media-amazon.com/images/I/71FCvwtL8-L._AC_UL320_.jpg',
+  title: 'F*cking History: 111 Lessons You Should Have Learned in School',
+  author: 'The Captain',
  },
  {
   id: 2,
   img:
-   'https://images-na.ssl-images-amazon.com/images/I/71aLultW5EL._AC_UL200_SR200,200_.jpg',
-  title: 'Our Class is a Family',
-  author: 'Shannon Olsen',
+   'https://images-na.ssl-images-amazon.com/images/I/51bCiaJcnmL._SX322_BO1,204,203,200_.jpg',
+  title: 'The Spy and the Traitor: The Greatest Espionage Story of the Cold War',
+  author: 'Ben Macintyre',
  },
  {
   id: 3,
   img:
-   'https://images-na.ssl-images-amazon.com/images/I/71e5m7xQd0L._AC_UL200_SR200,200_.jpg',
-  title: 'The Vanishing Half: A Novel',
-  author: 'Brit Bennett',
+   'https://images-na.ssl-images-amazon.com/images/I/51b-JoV-1xS._SX329_BO1,204,203,200_.jpg',
+  title: 'The Last Thing He Told Me: A Novel ',
+  author: 'Laura Dave',
  },
 ];
