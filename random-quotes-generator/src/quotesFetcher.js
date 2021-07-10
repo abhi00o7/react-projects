@@ -3,7 +3,7 @@ import React,{useState, useEffect} from 'react'
 function FetchQuotes(){
 
     const [quote,setQuote] = useState('')
-    const [loading,setLoading] = useState('')
+    // const [loading,setLoading] = useState('')
     const [author,setAuthor] = useState('')
     let random = Math.floor(Math.random() * 99)
     useEffect(() =>{
@@ -18,12 +18,12 @@ function FetchQuotes(){
     },[])
     return (
     <>
-    <h1>
+    <p>
+       - {author} -
+    </p>
+    <h1 className="hindiFonts">
         {quote}
     </h1>
-    <p>
-       - {author}
-    </p>
     </>)
 }
 
