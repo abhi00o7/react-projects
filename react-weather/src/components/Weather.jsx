@@ -8,7 +8,7 @@ export default function Weather(props) {
                     {props.city},{props.country}
                 </h1>
                 <h5 className="py-4">
-                    <i className="wi wi-day-sunny display-1"/>
+                    <i className={`wi ${props.weatherIcon} display-1`}/>
                 </h5>
                 <h1 className="py-2">{props.tempCelsius}&deg;</h1>
                 {/* To show the maximum and minimum temperature value */}
