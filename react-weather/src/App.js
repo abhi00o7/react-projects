@@ -24,6 +24,9 @@ export class App extends React.Component {
     }
     this.getWeather()
   }
+  calculateCelsius(temp){
+    return Math.floor(temp-273.15)
+  }
   getWeather = async () =>{
     const weatherAPICall = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=delhi&appid=${API_KEY}`)
 
@@ -32,14 +35,25 @@ export class App extends React.Component {
     console.log(response);
     this.setState({
       city:response.name,
-      country: response.sys.country
+      country: response.sys.country,
+      celsius:this.calculateCelsius(response.main.temp),
+      tempMax:this.calculateCelsius(response.main.temp_max),
+      tempMin:this.calculateCelsius(response.main.temp_min)
+
     })
   }
 
   render() {
     return (
       <div className="App">
-       <Weather city={this.state.city} country={this.state.country}/>
+       <Weather 
+        city={this.state.city} 
+        country={this.state.country}
+        tempCelsius={this.state.celsius}
+        tempMax={this.state.tempMax}
+        tempMin={this.state.tempMin}
+        description={this.state.description}
+        />
       </div>
     );
   }
