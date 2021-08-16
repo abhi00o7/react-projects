@@ -1,18 +1,20 @@
 // import React from 'react'
 
-export default function Weather() {
+export default function Weather(props) {
     return (
         <div className="container">
             <div className="cards">
-                <h1 className="center">LocationUnknown</h1>
+                <h1 className="center">
+                    {props.city},{props.country}
+                </h1>
                 <h5 className="py-4">
                     <i className="wi wi-day-sunny display-1"/>
                 </h5>
-                <h1 className="py-2">24&deg;</h1>
+                <h1 className="py-2">{props.tempCelsius}&deg;</h1>
                 {/* To show the maximum and minimum temperature value */}
-                {minMax(23,44)}
+                {minMax(props.tempMax,props.tempMin)}
                 <h4 className="py-3">
-                    Heavy UV radiation
+                    {props.description}
                 </h4>
             </div>
         </div>
