@@ -1,4 +1,6 @@
-# Getting Started with Create React App
+# Weather React App
+
+This product usages free version of the weather api calls from [Open Weather Map](https://openweathermap.org/api)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -68,3 +70,18 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## Previews
+
+#### Initial State
+![initial_state](https://user-images.githubusercontent.com/31090188/129633864-443fc2ba-8d06-433b-becb-9301de1540ff.png)
+
+#### Input State
+![active_input_state](https://user-images.githubusercontent.com/31090188/129633898-8f1cb2bd-1ebe-475b-9b80-5beeb21cf8b2.png)
+
+#### Output State
+![final_output_state](https://user-images.githubusercontent.com/31090188/129633943-2838b1d8-4457-46d4-b338-49be889fede6.png)
+
+#### Mobile State
+![final_output_state](https://user-images.githubusercontent.com/31090188/129633974-5be559c0-e2c3-4bd9-a77c-bff90f83aa6f.png)
+
