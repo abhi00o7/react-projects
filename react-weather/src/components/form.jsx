@@ -2,8 +2,9 @@ import React from 'react';
 import './style.css'
 const Form = props => {
     return(
-    <form onSubmit={props.loadweather}>
-        <div className="container">
+    <div className="container">
+        <div>{props.error? error():null}</div>
+        <form onSubmit={props.loadWeather}>
             <div className="row">
                 <div className="col-md-3 offset-md-2">
                     <input type="text" className="form-control" name="city" autoComplete="off" placeholder="City Name"/>
@@ -17,9 +18,16 @@ const Form = props => {
                 <button className="btn btn-warning">Check</button>
                 </div>
             </div>
-        </div>
-    </form>
+        </form>
+    </div>
     )
 }
 
+function error(){
+    return(
+        <div className="alert alert-danger mx-5" role="alert">
+            Both City and country names should be present.
+        </div>
+    )
+}
 export default Form
