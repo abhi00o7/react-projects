@@ -12,7 +12,7 @@ export default function Weather(props) {
                 </h5>
                 <h1 className="py-2">{props.tempCelsius}&deg;</h1>
                 {/* To show the maximum and minimum temperature value */}
-                {minMax(props.tempMin,props.tempMax)}
+                {minMax(props.tempMin, props.tempMax)}
                 <h4 className="py-3">
                     {props.description}
                 </h4>

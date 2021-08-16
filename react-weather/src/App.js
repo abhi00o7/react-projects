@@ -1,11 +1,9 @@
-// eslint-disable-next-line
-import logo from './logo.svg';
-import './App.css';
-import Weather from './components/Weather';
+import './App.css'
+import Weather from './components/Weather'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'weather-icons/css/weather-icons.css'
 import React from 'react'
-
+import Form from './components/form'
 
 const API_KEY = 'fa8631b7b84b9cda60d41c88fac3398a'
 export class App extends React.Component {
@@ -80,11 +78,17 @@ export class App extends React.Component {
         });
     }
   }
+  getWeather = async (e) =>{
+    e.preventDefault();
+
+    const city = e.target.element.city.value
+    const country = e.target.element.country.value
+  }
   calculateCelsius(temp) {
     return Math.floor(temp - 273.15)
   }
   getWeather = async () => {
-    const weatherAPICall = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=delhi&appid=${API_KEY}`)
+    const weatherAPICall = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=miami&appid=${API_KEY}`)
 
     const response = await weatherAPICall.json()
 
@@ -103,6 +107,7 @@ export class App extends React.Component {
 
   render() {
     return ( <div className = "App" >
+      <Form/>
       <
       Weather city = {
         this.state.city
