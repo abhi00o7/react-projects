@@ -1,17 +1,21 @@
 .container form{
     margin-top: 3rem;
+    text-align: center;
 }
 form input[name="city"],
 form input[name="country"]{
+    text-align: center;
     background-color: transparent;
     color: #575656;
     border: 0;
-    border-bottom: 2px solid #fff;
+    border-bottom: 2px solid white;
     border-radius: 7px;
+    margin-bottom: 3rem;
 }
 
 form input:focus{
     background-color: transparent;
     box-shadow: none !important;
+    position: relative;
     
 }

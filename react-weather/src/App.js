@@ -86,10 +86,12 @@ export class App extends React.Component {
     e.preventDefault();
 
     const city = e.target.elements.city.value;
-    const country = e.target.elements.country.value;
-    if (city && country) {
+    // feature update getting weather info without country 
+    // const country = e.target.elements.country.value;
+    // if (city && country) {
+    if (city) {
 
-      const weatherAPICall = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${API_KEY}`)
+      const weatherAPICall = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}`)
       
       
       const response = await weatherAPICall.json()
