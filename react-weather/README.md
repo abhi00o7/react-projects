@@ -10,7 +10,7 @@ In the project directory, you can run:
 
 ### `npm i boootstrap`
 
-### `### `npm i https://github.com/erikflowers/weather-icons.git`
+### `npm i https://github.com/erikflowers/weather-icons.git` 
 
 ### `npm start`
 
