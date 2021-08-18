@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import 'weather-icons/css/weather-icons.css'
 import React from 'react'
 import Form from './components/form'
+import ErrorFallback from './components/ErrorFallback'
 
 const API_KEY = 'fa8631b7b84b9cda60d41c88fac3398a'
 export class App extends React.Component {
@@ -36,7 +37,7 @@ export class App extends React.Component {
 
   }
   get_WeatherIcon(icons, rangeId) {
-  switch (true) {
+    switch (true) {
       case rangeId >= 200 && rangeId < 232:
         this.setState({
           icon: icons.Thunderstorm
@@ -89,41 +90,53 @@ export class App extends React.Component {
     // feature update getting weather info without country 
     // const country = e.target.elements.country.value;
     // if (city && country) {
+
     if (city) {
 
       const weatherAPICall = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}`)
-      
-      
+
       const response = await weatherAPICall.json()
-      
+      // feature to handle error while the response invalid
+      try {
+        this.setState({
+          city: `${response.name},${response.sys.country}`,
+        })
+      } catch (error) {
+        return <ErrorFallback error = {
+          error
+        }
+        />
+      }
       console.log(response);
+
       this.setState({
-        city:`${response.name},${response.sys.country}`,
+        city: `${response.name},${response.sys.country}`,
         celsius: this.calculateCelsius(response.main.temp),
         tempMax: this.calculateCelsius(response.main.temp_max),
         tempMin: this.calculateCelsius(response.main.temp_min),
         description: response.weather[0].description,
-        
+
       })
       this.get_WeatherIcon(this.weatherIcon, response.weather[0].id);
-    }
-    else {
-      this.setState({error:true})
+    } else {
+      this.setState({
+        error: true
+      })
     }
   }
 
   render() {
-    return ( <div className = "App" >
-      <Form 
-      error = {
+    return ( 
+    <div className = "App" >
+      <Form error = {
         this.state.error
-      }  
+      }
       loadWeather = {
         this.getWeather
       }
-        />
-      <
-      Weather city = {
+      /> 
+      {/* <ErrorFallback/> */}
+      <Weather city = {
         this.state.city
       }
       country = {
@@ -144,8 +157,8 @@ export class App extends React.Component {
       weatherIcon = {
         this.state.icon
       }
+      />
 
-      /> 
       </div>
     );
   }
