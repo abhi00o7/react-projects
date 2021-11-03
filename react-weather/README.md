@@ -81,14 +81,18 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 ## Previews
 
 #### Initial State
+> screenshot:
 ![initial_state](https://user-images.githubusercontent.com/31090188/129633864-443fc2ba-8d06-433b-becb-9301de1540ff.png)
 
 #### Input State
+> screenshot:
 ![active_input_state](https://user-images.githubusercontent.com/31090188/129633898-8f1cb2bd-1ebe-475b-9b80-5beeb21cf8b2.png)
 
 #### Output State
+> screenshot:
 ![final_output_state](https://user-images.githubusercontent.com/31090188/129633943-2838b1d8-4457-46d4-b338-49be889fede6.png)
 
 #### Mobile State
+> screenshot:
 ![final_output_state](https://user-images.githubusercontent.com/31090188/129633974-5be559c0-e2c3-4bd9-a77c-bff90f83aa6f.png)
 
